@@ -18,5 +18,19 @@
     <ClCompile Include="day1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Part1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Part2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Part1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Part2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,6 +1,8 @@
-#include <iostream>
+#include "Part1.h"
+#include "Part2.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    Part1::Solution("input.txt");
+    Part2::Solution("input.txt");
 }
