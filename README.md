@@ -9,3 +9,8 @@ These are my solutions as of such you might find some janky code (no promises). 
 ## How to run
 
 This should compile and run with Visual Studio 2019 or later. I shouldn't have done anything funky so you can probably figure out how to compile and run it if you don't want to use VS.
+
+## Content
+- Day 1 [[⭐](day1/Part1.cpp)][[⭐](day1/Part2.cpp)]
+- Day 2 [[⭐](day2/Part1.cpp)][[⭐](day2/Part2.cpp)]
+- Day 3 [[⭐](day3/Part1.cpp)][[⭐](day3/Part2.cpp)]
