@@ -9,13 +9,12 @@
 
 using namespace std;
 
-class Part1
+class Part2
 {
 public:
 	static void Solution(string f);
 
 private:
 	static vector<string> splitString(string s, const string delimiter);
-	static void checkBags(int* c, vector<Bag*>* bags, Bag* b);
+	static int checkBags(Bag* b);
 };
-

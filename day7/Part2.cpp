@@ -1,6 +1,6 @@
-#include "Part1.h"
+#include "Part2.h"
 
-void Part1::Solution(string f)
+void Part2::Solution(string f)
 {
 	ifstream file(f);
 
@@ -46,16 +46,10 @@ void Part1::Solution(string f)
 		}
 	}
 
-	int result = 0;
-
-	vector<Bag*> b;
-
-	checkBags(&result, &b, shinyGold);
-
-	cout << "Answer: " << result << endl;
+	cout << "Answer: " << checkBags(shinyGold) << endl;
 }
 
-vector<string> Part1::splitString(string s, const string delimiter)
+vector<string> Part2::splitString(string s, const string delimiter)
 {
 	vector<string> strings = vector<string>();
 	int pos;
@@ -71,15 +65,14 @@ vector<string> Part1::splitString(string s, const string delimiter)
 	return strings;
 }
 
-void Part1::checkBags(int* c, vector<Bag*>* bags, Bag* b)
+int Part2::checkBags(Bag* b)
 {
-	for (size_t i = 0; i < b->parentPtr.size(); i++)
+	int instancesOfBag = 0;
+	for (size_t i = 0; i < b->childrenPtr.size(); i++)
 	{
-		if (find(bags->begin(),bags->end(),b->parentPtr[i]) == bags->end())
-		{
-			bags->push_back(b->parentPtr[i]);
-			(*c)++;
-			checkBags(c, bags, b->parentPtr[i]);
-		}
+		instancesOfBag += (b->children[i].front() - '0');
+		instancesOfBag += (b->children[i].front() - '0') * checkBags(b->childrenPtr[i]);
 	}
+
+	return instancesOfBag;
 }
