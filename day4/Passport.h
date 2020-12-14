@@ -6,7 +6,6 @@
 
 #include "Fields.h"
 
-using namespace std;
 
 class Passport
 {
@@ -14,29 +13,29 @@ class Passport
 public:
 	Passport() {};
 
-	virtual void ParseData(string s);
+	virtual void ParseData(std::string s);
 	virtual bool ValidatePassport();
 
 protected:
 
-	virtual void ParseBirthYear(string s);
-	virtual void ParseIssueYear(string s);
-	virtual void ParseExpirationYear(string s);
-	virtual void ParseHeight(string s);
-	virtual void ParseHairColor(string s);
-	virtual void ParseEyeColor(string s);
-	virtual void ParsePassportID(string s);
-	virtual void ParseCountryID(string s);
+	virtual void ParseBirthYear(std::string s);
+	virtual void ParseIssueYear(std::string s);
+	virtual void ParseExpirationYear(std::string s);
+	virtual void ParseHeight(std::string s);
+	virtual void ParseHairColor(std::string s);
+	virtual void ParseEyeColor(std::string s);
+	virtual void ParsePassportID(std::string s);
+	virtual void ParseCountryID(std::string s);
 
-	virtual field GetFieldEnum(string s);
+	virtual field GetFieldEnum(std::string s);
 	virtual void Print();
 
-	string birthYear;
-	string issueYear;
-	string expirationYear;
-	string height;
-	string hairColor;
-	string eyeColor;
-	string passportID;
-	string countryID;
+	std::string birthYear;
+	std::string issueYear;
+	std::string expirationYear;
+	std::string height;
+	std::string hairColor;
+	std::string eyeColor;
+	std::string passportID;
+	std::string countryID;
 };

@@ -1,12 +1,12 @@
 #include "Part1.h"
 
-void Part1::Solution(string f)
+void Part1::Solution(std::string f)
 {
-	vector<password> passwords = vector<password>();
+	std::vector<password> passwords = std::vector<password>();
 
-	ifstream file(f);
+	std::ifstream file(f);
 
-	string bounds, testchar, pass;
+	std::string bounds, testchar, pass;
 
 	while (file >> bounds)
 	{
@@ -26,15 +26,15 @@ void Part1::Solution(string f)
 		validPasswords += VerifyPassword(&passwords[i]);
 	}
 
-	cout << validPasswords << endl;
+	std::cout << validPasswords << std::endl;
 }
 
-password Part1::ParsePassword(string bounds, string tchar, string p)
+password Part1::ParsePassword(std::string bounds, std::string tchar, std::string p)
 {
 	char* nextToken;
 	char* token = strtok_s(_strdup(bounds.c_str()), "-", &nextToken);
 
-	return password(stoi(token), stoi(nextToken), tchar[0], p);
+	return password(std::stoi(token), std::stoi(nextToken), tchar[0], p);
 }
 
 bool Part1::VerifyPassword(password* p)

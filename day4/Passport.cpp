@@ -1,9 +1,9 @@
 #include "Passport.h"
 
-void Passport::ParseData(string s)
+void Passport::ParseData(std::string s)
 {
 	char* nextToken = _strdup(s.c_str());
-	vector<char*> fields = vector<char*>();
+	std::vector<char*> fields = std::vector<char*>();
 
 	while (strlen(nextToken) != 0)
 	{
@@ -14,7 +14,7 @@ void Passport::ParseData(string s)
 
 	for (size_t i = 0; i < length; i++)
 	{
-		field f = GetFieldEnum((string)strtok_s(fields[i], ":", &nextToken));
+		field f = GetFieldEnum((std::string)strtok_s(fields[i], ":", &nextToken));
 
 		switch (f)
 		{
@@ -64,47 +64,47 @@ bool Passport::ValidatePassport()
 	return true;
 }
 
-void Passport::ParseBirthYear(string s)
+void Passport::ParseBirthYear(std::string s)
 {
 	birthYear = s;
 }
 
-void Passport::ParseIssueYear(string s)
+void Passport::ParseIssueYear(std::string s)
 {
 	issueYear = s;
 }
 
-void Passport::ParseExpirationYear(string s)
+void Passport::ParseExpirationYear(std::string s)
 {
 	expirationYear = s;
 }
 
-void Passport::ParseHeight(string s)
+void Passport::ParseHeight(std::string s)
 {
 	height = s;
 }
 
-void Passport::ParseHairColor(string s)
+void Passport::ParseHairColor(std::string s)
 {
 	hairColor = s;
 }
 
-void Passport::ParseEyeColor(string s)
+void Passport::ParseEyeColor(std::string s)
 {
 	eyeColor = s;
 }
 
-void Passport::ParsePassportID(string s)
+void Passport::ParsePassportID(std::string s)
 {
 	passportID = s;
 }
 
-void Passport::ParseCountryID(string s)
+void Passport::ParseCountryID(std::string s)
 {
 	countryID = s;
 }
 
-field Passport::GetFieldEnum(string s)
+field Passport::GetFieldEnum(std::string s)
 {
 	if (s == "byr") return field::byr;
 	if (s == "iyr") return field::iyr;
@@ -129,5 +129,5 @@ void Passport::Print()
 	if (passportID != "") std::cout << "pid:" << passportID << " ";
 	if (countryID != "") std::cout << "cid:" << countryID << " ";
 
-	std::cout << endl;
+	std::cout << std::endl;
 }

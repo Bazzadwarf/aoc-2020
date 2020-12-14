@@ -1,10 +1,10 @@
 #include "Part1.h"
 
-void Part1::Solution(string f)
+void Part1::Solution(std::string f)
 {
-    vector<int> num = vector<int>();
+    std::vector<int> num = std::vector<int>();
 
-    ifstream file(f);
+    std::ifstream file(f);
 
     int a;
 
@@ -23,7 +23,7 @@ void Part1::Solution(string f)
         {
             if (num[i] + num[j] == 2020)
             {
-                cout << "The answer is: " << num[i] * num[j] << endl;
+                std::cout << "The answer is: " << num[i] * num[j] << std::endl;
                 return;
             }
         }

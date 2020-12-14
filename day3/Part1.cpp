@@ -1,13 +1,13 @@
 #include "Part1.h"
 
-void Part1::Solution(string f)
+void Part1::Solution(std::string f)
 {
-	ifstream file(f);
+	std::ifstream file(f);
 
-	string temp;
+	std::string temp;
 
-	vector<vector<bool>> map = vector<vector<bool>>();
-	vector<bool> newRow = vector<bool>();
+	std::vector<std::vector<bool>> map = std::vector<std::vector<bool>>();
+	std::vector<bool> newRow = std::vector<bool>();
 
 	// Read the file
 	while (file >> temp)
@@ -27,10 +27,10 @@ void Part1::Solution(string f)
 		newRow.clear();
 	}
 
-	cout << "Trees hit: " << CheckTrees(map) << endl;
+	std::cout << "Trees hit: " << CheckTrees(map) << std::endl;
 }
 
-int Part1::CheckTrees(vector<vector<bool>> map)
+int Part1::CheckTrees(std::vector<std::vector<bool>> map)
 {
 	int treesHit = 0;
 	int length = map.size() - 1;

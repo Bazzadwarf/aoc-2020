@@ -6,17 +6,16 @@
 #include <vector>
 #include "Password.h"
 
-using namespace std;
 
 class Part1
 {
 public:
 
-	static void Solution(string f);
+	static void Solution(std::string f);
 
 private:
 
-	static password ParsePassword(string bounds, string tchar, string p);
+	static password ParsePassword(std::string bounds, std::string tchar, std::string p);
 
 	static bool VerifyPassword(password* p);
 };

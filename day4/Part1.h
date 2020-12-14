@@ -3,12 +3,11 @@
 #include <fstream>
 #include "Passport.h"
 
-using namespace std;
 
 class Part1
 {
 public:
 
-	static void Solution(string f);
+	static void Solution(std::string f);
 };
 

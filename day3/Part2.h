@@ -5,16 +5,15 @@
 #include <string>
 #include <vector>
 
-using namespace std;
 
 class Part2
 {
 public:
 
-	static void Solution(string f);
+	static void Solution(std::string f);
 
 private:
 
-	static int CheckTrees(vector<vector<bool>> map, int right, int down);
+	static int CheckTrees(std::vector<std::vector<bool>> map, int right, int down);
 };
 

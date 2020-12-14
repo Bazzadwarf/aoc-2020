@@ -1,19 +1,19 @@
 #include "Part2.h"
 
-void Part2::Solution(string f)
+void Part2::Solution(std::string f)
 {
-	ifstream file(f);
+	std::ifstream file(f);
 
-	string temp;
+	std::string temp;
 
-	vector<Bag> bags;
+	std::vector<Bag> bags;
 	Bag* shinyGold = nullptr;
 
 	// Create List of Bags
 	while (getline(file, temp))
 	{
-		vector<string> tokens = splitString(temp, " bags contain ");
-		string bagColour = tokens[0];
+		std::vector<std::string> tokens = splitString(temp, " bags contain ");
+		std::string bagColour = tokens[0];
 		tokens[1].pop_back();
 		tokens = splitString(tokens[1], ", ");
 
@@ -32,7 +32,7 @@ void Part2::Solution(string f)
 		{
 			for (size_t k = 0; k < bags.size(); k++)
 			{
-				if (bags[i].children[j].find(bags[k].bagName) != string::npos)
+				if (bags[i].children[j].find(bags[k].bagName) != std::string::npos)
 				{
 					bags[i].childrenPtr.push_back(&bags[k]);
 					bags[k].parentPtr.push_back(&bags[i]);
@@ -46,15 +46,15 @@ void Part2::Solution(string f)
 		}
 	}
 
-	cout << "Answer: " << checkBags(shinyGold) << endl;
+	std::cout << "Answer: " << checkBags(shinyGold) << std::endl;
 }
 
-vector<string> Part2::splitString(string s, const string delimiter)
+std::vector<std::string> Part2::splitString(std::string s, const std::string delimiter)
 {
-	vector<string> strings = vector<string>();
+	std::vector<std::string> strings = std::vector<std::string>();
 	int pos;
 
-	while ((pos = s.find(delimiter)) != string::npos)
+	while ((pos = s.find(delimiter)) != std::string::npos)
 	{
 		strings.push_back(s.substr(0, pos));
 		s.erase(0, pos + delimiter.length());

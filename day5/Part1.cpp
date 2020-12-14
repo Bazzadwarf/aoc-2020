@@ -1,13 +1,13 @@
 #include "Part1.h"
 #include <math.h>
 
-void Part1::Solution(string f)
+void Part1::Solution(std::string f)
 {
-	ifstream file(f);
+	std::ifstream file(f);
 
-	string temp;
+	std::string temp;
 
-	vector<Seat> tickets = vector<Seat>();
+	std::vector<Seat> tickets = std::vector<Seat>();
 
 	while (file >> temp)
 	{
@@ -25,5 +25,5 @@ void Part1::Solution(string f)
 		}
 	}
 
-	cout << "The highest ID is: " << highestID << endl;
+	std::cout << "The highest ID is: " << highestID << std::endl;
 }

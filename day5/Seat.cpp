@@ -2,7 +2,7 @@
 #define MAXROW 127
 #define MAXCOLUMN 7
 
-Seat::Seat(string s)
+Seat::Seat(std::string s)
 { 
 	row = GetNum(s.substr(0, 7), MAXROW);
 	column = GetNum(s.substr(7, 3), MAXCOLUMN);
@@ -10,7 +10,7 @@ Seat::Seat(string s)
 
 }
 
-int Seat::GetNum(string s, int max)
+int Seat::GetNum(std::string s, int max)
 {
 	int min = 0;
 

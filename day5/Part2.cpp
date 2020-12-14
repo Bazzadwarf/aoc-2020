@@ -3,13 +3,13 @@
 #define MAXROW 127
 #define MAXCOLUMN 7
 
-void Part2::Solution(string f)
+void Part2::Solution(std::string f)
 {
-	ifstream file(f);
+	std::ifstream file(f);
 
-	string temp;
+	std::string temp;
 
-	vector<Seat> tickets = vector<Seat>();
+	std::vector<Seat> tickets = std::vector<Seat>();
 
 	while (file >> temp)
 	{
@@ -30,7 +30,7 @@ void Part2::Solution(string f)
 	{
 		if (seats[i - 1] && !seats[i] && seats[i + 1])
 		{
-			cout << "The answer is: " << i << endl;
+			std::cout << "The answer is: " << i << std::endl;
 			break;
 		}
 	}

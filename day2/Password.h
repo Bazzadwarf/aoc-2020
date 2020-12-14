@@ -2,16 +2,15 @@
 
 #include <string>
 
-using namespace std;
 
 struct password
 {
 	int lowerBound;
 	int upperBound;
 	char testchar;
-	string pass;
+	std::string pass;
 
-	password(int lb, int ub, char tc, string p)
+	password(int lb, int ub, char tc, std::string p)
 	{
 		lowerBound = lb;
 		upperBound = ub;

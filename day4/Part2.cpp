@@ -1,12 +1,12 @@
 #include "Part2.h"
 
-void Part2::Solution(string f)
+void Part2::Solution(std::string f)
 {
-	vector<SmartPassport> passports = vector<SmartPassport>();
+	std::vector<SmartPassport> passports = std::vector<SmartPassport>();
 
-	ifstream file(f);
+	std::ifstream file(f);
 
-	string input, tempPassport;
+	std::string input, tempPassport;
 
 	while (getline(file, input))
 	{
@@ -36,5 +36,5 @@ void Part2::Solution(string f)
 		num += passports[i].ValidatePassport();
 	}
 
-	cout << "Number of valid passports: " << num << endl;
+	std::cout << "Number of valid passports: " << num << std::endl;
 }

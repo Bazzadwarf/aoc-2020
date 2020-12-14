@@ -7,13 +7,13 @@ public:
 
 protected:
 
-	virtual void ParseBirthYear(string s) override;
-	virtual void ParseIssueYear(string s) override;
-	virtual void ParseExpirationYear(string s) override;
-	virtual void ParseHeight(string s) override;
-	virtual void ParseHairColor(string s) override;
-	virtual void ParseEyeColor(string s) override;
-	virtual void ParsePassportID(string s) override;
-	virtual void ParseCountryID(string s) override;
+	virtual void ParseBirthYear(std::string s) override;
+	virtual void ParseIssueYear(std::string s) override;
+	virtual void ParseExpirationYear(std::string s) override;
+	virtual void ParseHeight(std::string s) override;
+	virtual void ParseHairColor(std::string s) override;
+	virtual void ParseEyeColor(std::string s) override;
+	virtual void ParsePassportID(std::string s) override;
+	virtual void ParseCountryID(std::string s) override;
 };
 

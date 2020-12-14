@@ -2,16 +2,15 @@
 #include <string>
 #include <vector>
 
-using namespace std;
 
 class Bag
 {
 public:
 	Bag();
-	Bag(string s, vector<string> c);
+	Bag(std::string s, std::vector<std::string> c);
 
-	string bagName;
-	vector<string> children;
-	vector<Bag*> childrenPtr;
-	vector<Bag*> parentPtr;
+	std::string bagName;
+	std::vector<std::string> children;
+	std::vector<Bag*> childrenPtr;
+	std::vector<Bag*> parentPtr;
 };

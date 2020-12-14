@@ -4,7 +4,7 @@ Bag::Bag()
 {
 }
 
-Bag::Bag(string s, vector<string> c)
+Bag::Bag(std::string s, std::vector<std::string> c)
 {
 	bagName = s;
 	children = c;

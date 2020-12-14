@@ -7,14 +7,13 @@
 
 #include "Bag.h"
 
-using namespace std;
 
 class Part2
 {
 public:
-	static void Solution(string f);
+	static void Solution(std::string f);
 
 private:
-	static vector<string> splitString(string s, const string delimiter);
+	static std::vector<std::string> splitString(std::string s, const std::string delimiter);
 	static int checkBags(Bag* b);
 };
