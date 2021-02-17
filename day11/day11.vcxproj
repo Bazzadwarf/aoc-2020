@@ -141,9 +141,11 @@
   <ItemGroup>
     <ClCompile Include="day11.cpp" />
     <ClCompile Include="Part1.cpp" />
+    <ClCompile Include="Part2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Part1.h" />
+    <ClInclude Include="Part2.h" />
     <ClInclude Include="Seat.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

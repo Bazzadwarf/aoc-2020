@@ -10,8 +10,6 @@ void Part1::Solution(std::string f)
 
 	while (file >> temp)
 	{
-		std::cout << temp << std::endl;
-
 		std::vector<Seat> row = std::vector<Seat>();
 
 		for (size_t i = 0; i < temp.size(); i++)
