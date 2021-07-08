@@ -23,3 +23,4 @@ This should compile and run with Visual Studio 2019 or later. I shouldn't have d
 - Day 9 [[⭐](day9/Part1.cpp)][[⭐](day9/Part2.cpp)]
 - Day 10 [[⭐](day10/Part1.cpp)][[⭐](day10/Part2.cpp)]
 - Day 11 [[⭐](day11/Part1.cpp)][[⭐](day11/Part2.cpp)]
+- Day 12 [[⭐](day12/Part1.cpp)][[⭐](day12/Part2.cpp)]
