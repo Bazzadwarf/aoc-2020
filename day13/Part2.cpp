@@ -13,7 +13,8 @@ void Part2::Solution(std::string f)
 	// Get bus ID input;
 	file >> temp;
 
-	std::vector<int> busIDs = std::vector<int>();
+	std::vector<Bus> busIDs = std::vector<Bus>();
+	int offset = 0;
 
 	while (temp.size() > 0)
 	{
@@ -31,40 +32,28 @@ void Part2::Solution(std::string f)
 
 		if (lhs != "x")
 		{
-			busIDs.push_back(stoi(lhs));
+			busIDs.push_back({ stoi(lhs), offset });
 		}
 
 		temp = rhs;
+		offset++;
 	}
 
-	int ans = 0;
-	int currTime = time;
-	bool invalidate = false;
+	// This is a sieve search as of such the computational time is exponential
+	// it is somewhat inefficent but does the job fine here.
 
-	while (ans == 0)
+	int64_t ans = 0;
+	int64_t currProd = 1;
+
+	for (auto bus : busIDs)
 	{
-		invalidate = false;
-
-		for (auto bus : busIDs)
+		while ((ans + bus.Offset) % bus.ID != 0)
 		{
-			if (currTime % bus != 0)
-			{
-				invalidate = true;
-
-				std::cout << "BANG! (" << currTime << ", " << bus << ")" << std::endl;
-				currTime += bus;
-				break;
-			}
+			ans += currProd;
 		}
-
-		if (!invalidate)
-		{
-			ans = currTime;
-		}
-
-
+		
+		currProd *= bus.ID;
 	}
-
 	std::cout << ans << std::endl;
 
 }
