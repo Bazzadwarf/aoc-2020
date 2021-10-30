@@ -6,6 +6,8 @@ You can follow along at [https://adventofcode.com/2020](https://adventofcode.com
 
 These are my solutions as of such you might find some janky code (no promises). **I highly suggest that you try completing them yourself first if you are following along!**
 
+**Update 2021-10-30**: This project is now archived as I no longer have any intentions to complete all the puzzles. Code is left as is for posterity.
+
 ## How to run
 
 This should compile and run with Visual Studio 2019 or later. I shouldn't have done anything funky so you can probably figure out how to compile and run it if you don't want to use VS.
